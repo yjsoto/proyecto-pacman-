@@ -10,6 +10,7 @@ public class main {
 		int tamaño;
 		System.out.print("ingrese el tamaño del tablero: ");
 		tamaño=lectura.nextInt();
+		if(tamaño >= 2 && tamaño <= 100) {
 		int [][] matriz = new int [tamaño][tamaño];
 		for(int j=0;j<tamaño;j++) {
 			for(int i=0;i<tamaño;i++) {
@@ -46,6 +47,7 @@ public class main {
 							break;
 						case 2:
 							maxComida = (contador > maxComida) ? contador : maxComida;
+							contador=0;
 							break;
 					}
 				}	
@@ -59,6 +61,7 @@ public class main {
 							break;
 						case 2:
 							maxComida = (contador > maxComida) ? contador : maxComida;
+							contador=0;
 							break;
 					}					
 				}
@@ -66,6 +69,7 @@ public class main {
 		}
 		System.out.println();
 		System.out.print(maxComida);
+		}
 		
 	}
 }
